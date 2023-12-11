@@ -1,0 +1,14 @@
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\bin\Debug\net8.0\RaceSimRemastered.exe
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\bin\Debug\net8.0\RaceSimRemastered.deps.json
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\bin\Debug\net8.0\RaceSimRemastered.runtimeconfig.json
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\bin\Debug\net8.0\RaceSimRemastered.dll
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\bin\Debug\net8.0\RaceSimRemastered.pdb
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\obj\Debug\net8.0\RaceSimRemastered.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\obj\Debug\net8.0\RaceSimRemastered.AssemblyInfoInputs.cache
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\obj\Debug\net8.0\RaceSimRemastered.AssemblyInfo.cs
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\obj\Debug\net8.0\RaceSimRemastered.csproj.CoreCompileInputs.cache
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\obj\Debug\net8.0\RaceSimRemastered.dll
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\obj\Debug\net8.0\refint\RaceSimRemastered.dll
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\obj\Debug\net8.0\RaceSimRemastered.pdb
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\obj\Debug\net8.0\RaceSimRemastered.genruntimeconfig.cache
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\obj\Debug\net8.0\ref\RaceSimRemastered.dll
