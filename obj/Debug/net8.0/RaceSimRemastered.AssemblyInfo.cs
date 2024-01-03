@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RaceSimRemastered")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+496fe1037642bfcd1a68243b44848a5c3c521bfb")]
 [assembly: System.Reflection.AssemblyProductAttribute("RaceSimRemastered")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RaceSimRemastered")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
