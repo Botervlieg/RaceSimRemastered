@@ -1,10 +1,11 @@
 ﻿using Controller;
 using Model;
+using RaceSimRemastered;
 
 Data.initialize(new Competition());
 Data.NextRace();
-Data.NextRace();
-Console.WriteLine(Data.CurrentRace.Track.Name);
+Visuals.Initialize(Data.CurrentRace);
+Visuals.DrawTrack();
 
 while (true)
 {

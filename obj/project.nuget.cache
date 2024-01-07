@@ -1,22 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s0GDEZ9Io9C5/v90qEuQGE8DY7FW/7E6H38QRbtvVj2y0WUmEKo7kCWaijqBBuJ2Bdn+GnMh1gtgUlYJWzjHtw==",
+  "dgSpecHash": "uaiLXh4SBBwF8mehc/jjpJJC3LO+JcEL1JWfjXiI+bVIynv/1U98aDjrKBhOUWXC6gzLKbYbD67KkbjSqzoWLA==",
   "success": true,
   "projectFilePath": "C:\\Users\\justi\\Documents\\Windesheim\\jaar2\\sem1\\RaceSimRemastered\\RaceSimRemastered\\RaceSimRemastered.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\justi\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\microsoft.codecoverage\\17.6.0\\microsoft.codecoverage.17.6.0.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\microsoft.net.test.sdk\\17.6.0\\microsoft.net.test.sdk.17.6.0.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.6.0\\microsoft.testplatform.objectmodel.17.6.0.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\microsoft.testplatform.testhost\\17.6.0\\microsoft.testplatform.testhost.17.6.0.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\nuget.frameworks\\5.11.0\\nuget.frameworks.5.11.0.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\nunit.analyzers\\3.6.1\\nunit.analyzers.3.6.1.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\nunit3testadapter\\4.2.1\\nunit3testadapter.4.2.1.nupkg.sha512",
-    "C:\\Users\\justi\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
