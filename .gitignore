@@ -1,2 +1,12 @@
 
 *.vsidx
+.vs/ProjectEvaluation/racesimremastered.metadata.v7.bin
+.vs/ProjectEvaluation/racesimremastered.projects.v7.bin
+.vs/RaceSimRemastered/DesignTimeBuild/.dtbcache.v2
+.vs/RaceSimRemastered/v17/.futdcache.v2
+.vs/RaceSimRemastered/v17/.suo
+ControllerTest/bin/Debug/net8.0/CoverletSourceRootsMapping_ControllerTest
+ControllerTest/obj/Debug/net8.0/ControllerTest.AssemblyInfo.cs
+ControllerTest/obj/Debug/net8.0/ControllerTest.AssemblyInfoInputs.cache
+RaceSimConsole/obj/Debug/net8.0/RaceSimConsole.AssemblyInfo.cs
+RaceSimConsole/obj/Debug/net8.0/RaceSimConsole.AssemblyInfoInputs.cache
