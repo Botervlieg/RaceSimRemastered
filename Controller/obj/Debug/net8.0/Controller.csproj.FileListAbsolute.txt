@@ -29,3 +29,4 @@ C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemaster
 C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\Controller\obj\Debug\net8.0\refint\Controller.dll
 C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\Controller\obj\Debug\net8.0\Controller.pdb
 C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\Controller\obj\Debug\net8.0\ref\Controller.dll
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\Controller\obj\Debug\net8.0\Controller.sourcelink.json

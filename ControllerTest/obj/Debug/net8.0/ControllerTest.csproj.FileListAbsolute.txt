@@ -102,3 +102,4 @@ C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\ControllerTest\
 C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\ControllerTest\bin\Debug\net8.0\Model.dll
 C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\ControllerTest\bin\Debug\net8.0\Controller.pdb
 C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\ControllerTest\bin\Debug\net8.0\Model.pdb
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\ControllerTest\obj\Debug\net8.0\ControllerTest.sourcelink.json

@@ -106,3 +106,4 @@ C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimConsole\
 C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimConsole\obj\Debug\net8.0\RaceSimConsole.pdb
 C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimConsole\obj\Debug\net8.0\RaceSimConsole.genruntimeconfig.cache
 C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimConsole\obj\Debug\net8.0\ref\RaceSimConsole.dll
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimConsole\obj\Debug\net8.0\RaceSimConsole.sourcelink.json

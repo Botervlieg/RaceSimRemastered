@@ -21,3 +21,4 @@ C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemaster
 C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\Model\obj\Debug\net8.0\refint\Model.dll
 C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\Model\obj\Debug\net8.0\Model.pdb
 C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\RaceSimRemastered\Model\obj\Debug\net8.0\ref\Model.dll
+C:\Users\justi\Documents\Windesheim\jaar2\sem1\RaceSimRemastered\Model\obj\Debug\net8.0\Model.sourcelink.json

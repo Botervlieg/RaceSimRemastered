@@ -12,7 +12,9 @@ namespace Model
         public int Points { get; set; }
         public IEquipment Equipment { get; set; }
         public TeamColors TeamColor { get; set; }
-
+        public int Distance { get; set; }
+        public int Lap {  get; set; }
+        public bool IsFinished { get; set; }
     }
 
     public enum TeamColors

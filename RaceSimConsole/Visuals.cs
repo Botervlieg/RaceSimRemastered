@@ -1,6 +1,5 @@
 ﻿using Controller;
 using Model;
-using System.IO.IsolatedStorage;
 
 namespace RaceSimRemastered
 {
@@ -14,6 +13,9 @@ namespace RaceSimRemastered
 
         public static void Initialize(Race race)
         {
+            Data.CurrentRace.DriversChanged += OnDriversChanged;
+            Data.CurrentRace.RaceEnded += OnRaceEnd;
+
             _direction = directions.East;
             _x = 30;
             _y = 30;
@@ -103,14 +105,20 @@ namespace RaceSimRemastered
             else if (data.Right != null)
             {
                 temp = DrawRightParticipants(section, data.Right);
-            }
-            else
+            } else
             {
                 for (int i = 0; i < section.Length; i++)
                 {
-                    temp[i] = section[i].Replace("1", " ").Replace("2", " ");
+                    temp[i] = section[i];
                 }
             }
+            //else
+            //{
+                for (int i = 0; i < temp.Length; i++)
+                {
+                    temp[i] = temp[i].Replace("1", " ").Replace("2", " ");
+                }
+            //}
 
 
             foreach (string line in temp)
@@ -177,6 +185,18 @@ namespace RaceSimRemastered
                 temp[i] = temp[i].Replace("2", p2.Name[0].ToString());
             }
             return temp;
+        }
+
+        public static void OnDriversChanged(object source, DriversChangedEventArgs e)
+        {
+            DrawTrack();
+        }
+
+        public static void OnRaceEnd(object source, EventArgs e)
+        {
+            Console.Clear();
+            Initialize(Data.CurrentRace);
+
         }
 
         #region graphics
