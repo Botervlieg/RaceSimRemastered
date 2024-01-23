@@ -13,9 +13,9 @@ namespace Controller
         public static Competition Competition;
         public static Race CurrentRace;
 
-        public static void initialize(Competition competition)
+        public static void initialize()
         {
-            Competition = competition;
+            Competition = new Competition();
             AddParticipants();
             AddTracks();
         }

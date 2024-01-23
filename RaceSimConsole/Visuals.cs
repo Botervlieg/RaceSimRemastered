@@ -196,8 +196,6 @@ namespace RaceSimRemastered
         {
             Console.Clear();
             Initialize(Data.CurrentRace);
-
-
         }
 
         #region graphics
