@@ -31,8 +31,11 @@ namespace Controller
 
         public void OnTimedEvent(object source, EventArgs e)
         {
+            FixEquipment();
+            BreakEquipment();
             Move();
             DriversChanged.Invoke(this, new DriversChangedEventArgs(Track));
+            
         }
 
         public void Debug()
@@ -42,16 +45,45 @@ namespace Controller
             Debug();
         }
 
+        private void BreakEquipment()
+        {
+            foreach (IParticipant participant in Participants)
+            {
+                if (!participant.Equipment.IsBroken)
+                {
+                    if (_random.Next(1, participant.Equipment.Quality) == 1)
+                    {
+                        participant.Equipment.Speed = 1;
+                        participant.Equipment.IsBroken = true;
+                    }
+                }
+            }
+        }
+
+        private void FixEquipment()
+        {
+            foreach (IParticipant participant in Participants)
+            {
+                if (participant.Equipment.IsBroken)
+                {
+                    if(_random.Next(1, 10) == 1)
+                    {
+                        participant.Equipment.IsBroken = false;
+                    }
+                }
+            }
+        }
+
         private void Move()
         {
             foreach (IParticipant participant in Participants)
             {
                 if (!participant.Equipment.IsBroken && !participant.IsFinished)
                 {
-                    participant.Distance += (participant.Equipment.Speed);
-                    if (participant.Equipment.Speed < 100)
+                    participant.Distance += (participant.Equipment.Speed * participant.Equipment.Performance);
+                    if (participant.Equipment.Speed < 20)
                     {
-                        participant.Equipment.Speed += 5;
+                        participant.Equipment.Speed += 2;
                     }
                     if (participant.Distance > 100)
                     {
@@ -141,7 +173,7 @@ namespace Controller
                 {
                     data.Right = null;
                 }
-                if(finished == Participants.Count)
+                if (finished == Participants.Count)
                 {
                     StopRace();
                 }
@@ -177,9 +209,9 @@ namespace Controller
         {
             foreach (IParticipant participant in Participants)
             {
-                participant.Equipment.Quality = _random.Next(3, 10);
-                participant.Equipment.Performance = _random.Next(3, 10);
-                participant.Equipment.Speed = participant.Equipment.Quality * 10;
+                participant.Equipment.Quality = _random.Next(20, 50);
+                participant.Equipment.Performance = _random.Next(3, 5);
+                participant.Equipment.Speed = _random.Next(5, 20);
             }
         }
 
@@ -209,7 +241,7 @@ namespace Controller
 
         private void CleanUp()
         {
-            foreach(IParticipant participant in Participants)
+            foreach (IParticipant participant in Participants)
             {
                 participant.IsFinished = false;
                 participant.Distance = 0;
@@ -227,9 +259,10 @@ namespace Controller
         public void StopRace()
         {
             _timer.Stop();
-            RaceEnded.Invoke(this, new EventArgs());
             CleanUp();
             Data.NextRace();
+            RaceEnded.Invoke(this, new EventArgs());
+            Start();
         }
     }
 }

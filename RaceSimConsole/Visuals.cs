@@ -153,7 +153,7 @@ namespace RaceSimRemastered
             }
             for (int i = 0; i < temp.Length; i++)
             {
-                temp[i] = temp[i].Replace("1", p1.Name[0].ToString());
+                temp[i] = p1.Equipment.IsBroken ? temp[i].Replace("1", "#") : temp[i].Replace("1", p1.Name[0].ToString());
             }
             return temp;
         }
@@ -167,7 +167,7 @@ namespace RaceSimRemastered
             }
             for (int i = 0; i < temp.Length; i++)
             {
-                temp[i] = temp[i].Replace("2", p1.Name[0].ToString());
+                temp[i] = p1.Equipment.IsBroken ? temp[i].Replace("2", "#") : temp[i].Replace("2", p1.Name[0].ToString());
             }
             return temp;
         }
@@ -181,8 +181,8 @@ namespace RaceSimRemastered
             }
             for (int i = 0; i < temp.Length; i++)
             {
-                temp[i] = temp[i].Replace("1", p1.Name[0].ToString());
-                temp[i] = temp[i].Replace("2", p2.Name[0].ToString());
+                temp[i] = p1.Equipment.IsBroken ? temp[i].Replace("1", "#") : temp[i].Replace("1", p1.Name[0].ToString());
+                temp[i] = p2.Equipment.IsBroken ? temp[i].Replace("2", "#") : temp[i].Replace("2", p2.Name[0].ToString());
             }
             return temp;
         }
@@ -196,6 +196,7 @@ namespace RaceSimRemastered
         {
             Console.Clear();
             Initialize(Data.CurrentRace);
+
 
         }
 
