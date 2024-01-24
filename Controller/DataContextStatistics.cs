@@ -1,6 +1,5 @@
 ﻿using Model;
 using System.ComponentModel;
-using System.Data.SqlTypes;
 using System.Runtime.CompilerServices;
 
 namespace Controller
@@ -10,20 +9,19 @@ namespace Controller
         public event PropertyChangedEventHandler? PropertyChanged;
 
 
-        private string _trackName => Data.CurrentRace.Track.Name;
-        public string TrackName { get { return _trackName; } private set { } }
+        public Track Track => Data.CurrentRace.Track;
 
-        private List<IParticipant> _drivers => Data.CurrentRace.Participants;
-        public List<IParticipant> Drivers { get { return _drivers; } private set { } }
+        public BindingList<Track> Tracks => new(Data.Competition.Tracks.ToList());
+
+        public BindingList<IParticipant> Drivers => new(Data.Competition.Participants.OrderByDescending(p => p.Points).ToList());
+
+        public BindingList<Section> Sections => new(Data.CurrentRace.Track.Sections.ToList());
 
 
         public DataContextStatistics()
         {
-            if (Data.CurrentRace != null)
-            {
-                Data.CurrentRace.DriversChanged += OnDriversChanged;
-                Data.CurrentRace.RaceEnded += OnRaceEnded;
-            }
+            Data.CurrentRace.DriversChanged += OnDriversChanged;
+            Data.CurrentRace.RaceEnded += OnRaceEnded;
         }
 
         public void OnRaceEnded(object sender, EventArgs e)
@@ -31,14 +29,10 @@ namespace Controller
             Data.CurrentRace.DriversChanged += OnDriversChanged;
             Data.CurrentRace.RaceEnded += OnRaceEnded;
         }
-
-
-
+        
         public void OnDriversChanged(object sender, DriversChangedEventArgs e)
         {
             PropertyChanged.Invoke(this, new PropertyChangedEventArgs(""));
         }
-
-
     }
 }

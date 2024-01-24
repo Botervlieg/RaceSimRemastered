@@ -10,13 +10,14 @@ namespace Model
     {
         public string Name { get; set; }
         public LinkedList<Section> Sections { get; set; }
-        public int length;
+        public int Length;
 
 
         public Track(string name, SectionTypes[] sections)
         {
             Name = name;
             Sections = GetSectionsFromArray(sections);
+            Length = sections.Length;
         }
 
         public LinkedList<Section> GetSectionsFromArray(SectionTypes[] sections)

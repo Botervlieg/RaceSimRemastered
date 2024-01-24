@@ -105,20 +105,19 @@ namespace RaceSimRemastered
             else if (data.Right != null)
             {
                 temp = DrawRightParticipants(section, data.Right);
-            } else
+            }
+            else
             {
                 for (int i = 0; i < section.Length; i++)
                 {
                     temp[i] = section[i];
                 }
             }
-            //else
-            //{
-                for (int i = 0; i < temp.Length; i++)
-                {
-                    temp[i] = temp[i].Replace("1", " ").Replace("2", " ");
-                }
-            //}
+
+            for (int i = 0; i < temp.Length; i++)
+            {
+                temp[i] = temp[i].Replace("1", " ").Replace("2", " ");
+            }
 
 
             foreach (string line in temp)

@@ -43,12 +43,6 @@ namespace Controller
             
         }
 
-        public void Debug()
-        {
-            Move();
-            DriversChanged.Invoke(this, new DriversChangedEventArgs(Track));
-            Debug();
-        }
 
         private void BreakEquipment()
         {
@@ -91,7 +85,7 @@ namespace Controller
                     {
                         participant.Equipment.Speed += 2;
                     }
-                    if (participant.Distance > 100)
+                    if (participant.Distance >= 100)
                     {
                         participant.Distance -= 100;
                         MoveSection(participant);
@@ -124,7 +118,6 @@ namespace Controller
                         data.Left = null;
                         done = true;
                     }
-
                 }
                 else
                 if (data.Right == participant)
@@ -166,9 +159,10 @@ namespace Controller
         private void NextLap(IParticipant participant, Section section)
         {
             participant.Lap++;
-            if (participant.Lap >= 1)
+            if (participant.Lap >= 3)
             {
                 participant.IsFinished = true;
+                participant.TotalDistance = 0;
                 participant.Points += PlacementPoints;
                 PlacementPoints--;
                 finished++;
@@ -201,9 +195,6 @@ namespace Controller
             }
 
         }
-
-
-
 
         public SectionData GetSectionData(Section section)
         {
@@ -271,7 +262,6 @@ namespace Controller
             CleanUp();
             Data.NextRace();
             RaceEnded.Invoke(this, new EventArgs());
-            Start();
         }
     }
 }

@@ -19,13 +19,20 @@
                 </MenuItem>
             </Menu>
         </DockPanel>
-        <Label x:Name="TrackName" Content="{Binding TrackName}" Margin="0,25,521,307"/>
-        
-        <DataGrid x:Name="DataGrid" MinColumnWidth="100" Width="300" Height="350" ItemsSource="{Binding Drivers}" AutoGenerateColumns="False">
+        <Label x:Name="TrackName" Content="{Binding Track.Name}" Margin="0,25,521,307"/>
+
+        <DataGrid x:Name="DataGrid" MinColumnWidth="100" Height="350" ItemsSource="{Binding Drivers}" AutoGenerateColumns="False" Margin="82,42,226,42">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Round" Binding="{Binding Lap}"/>
+                <DataGridTextColumn Header="Speed" Binding="{Binding Equipment.Speed}"/>
                 <DataGridTextColumn Header="Distance" Binding="{Binding TotalDistance}"/>
                 <DataGridTextColumn Header="IsCrashed" Binding="{Binding Equipment.IsBroken}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="DataGrid2" MinColumnWidth="150" Width="150" Height="350" ItemsSource="{Binding Sections}" AutoGenerateColumns="False" Margin="604,42,46,42">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="SectionTypes" Binding="{Binding SectionType}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
