@@ -10,6 +10,8 @@ namespace Model
     {
         public string Name { get; set; }
         public LinkedList<Section> Sections { get; set; }
+        public int length;
+
 
         public Track(string name, SectionTypes[] sections)
         {

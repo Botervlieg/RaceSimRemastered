@@ -19,5 +19,14 @@
                 </MenuItem>
             </Menu>
         </DockPanel>
+        <Label x:Name="TrackName" Content="{Binding TrackName}" Margin="0,25,521,307"/>
+        
+        <DataGrid x:Name="DataGrid" MinColumnWidth="100" Width="300" Height="350" ItemsSource="{Binding Drivers}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Distance" Binding="{Binding TotalDistance}"/>
+                <DataGridTextColumn Header="IsCrashed" Binding="{Binding Equipment.IsBroken}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

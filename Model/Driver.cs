@@ -13,6 +13,7 @@ namespace Model
         public IEquipment Equipment { get; set; }
         public TeamColors TeamColor { get; set; }
         public int Distance { get; set; }
+        public int TotalDistance { get; set; }
         public int Lap {  get; set; }
         public bool IsFinished { get; set; }
 
@@ -22,6 +23,7 @@ namespace Model
             Points = points;
             Equipment = equipment;
             TeamColor = teamColor;
+            TotalDistance = 0;
             Distance = 0;
             Lap = 0;
             IsFinished = false;

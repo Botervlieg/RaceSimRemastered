@@ -11,6 +11,7 @@ namespace Controller
         private Dictionary<Section, SectionData> _positions;
         private System.Timers.Timer _timer;
         public int finished = 0;
+        public int PlacementPoints;
 
         public event EventHandler<DriversChangedEventArgs> DriversChanged;
         public event EventHandler<EventArgs> RaceEnded;
@@ -18,6 +19,7 @@ namespace Controller
 
         public Race(Track track, List<IParticipant> participants)
         {
+            PlacementPoints = participants.Count;
             Track = track;
             Participants = participants;
             _positions = new Dictionary<Section, SectionData>();
@@ -34,7 +36,10 @@ namespace Controller
             FixEquipment();
             BreakEquipment();
             Move();
-            DriversChanged.Invoke(this, new DriversChangedEventArgs(Track));
+            if (DriversChanged != null)
+            {
+                DriversChanged.Invoke(this, new DriversChangedEventArgs(Track));
+            }
             
         }
 
@@ -81,6 +86,7 @@ namespace Controller
                 if (!participant.Equipment.IsBroken && !participant.IsFinished)
                 {
                     participant.Distance += (participant.Equipment.Speed * participant.Equipment.Performance);
+                    participant.TotalDistance += (participant.Equipment.Speed * participant.Equipment.Performance);
                     if (participant.Equipment.Speed < 20)
                     {
                         participant.Equipment.Speed += 2;
@@ -160,9 +166,11 @@ namespace Controller
         private void NextLap(IParticipant participant, Section section)
         {
             participant.Lap++;
-            if (participant.Lap >= 2)
+            if (participant.Lap >= 1)
             {
                 participant.IsFinished = true;
+                participant.Points += PlacementPoints;
+                PlacementPoints--;
                 finished++;
                 SectionData data = GetSectionData(section);
                 if (data.Left == participant)
@@ -176,6 +184,7 @@ namespace Controller
                 if (finished == Participants.Count)
                 {
                     StopRace();
+                    PlacementPoints = Participants.Count;
                 }
             }
         }
