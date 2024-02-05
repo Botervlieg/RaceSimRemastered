@@ -16,7 +16,6 @@ namespace Controller
         public event EventHandler<DriversChangedEventArgs> DriversChanged;
         public event EventHandler<EventArgs> RaceEnded;
 
-
         public Race(Track track, List<IParticipant> participants)
         {
             PlacementPoints = participants.Count;
@@ -40,9 +39,7 @@ namespace Controller
             {
                 DriversChanged.Invoke(this, new DriversChangedEventArgs(Track));
             }
-            
         }
-
 
         private void BreakEquipment()
         {
@@ -136,7 +133,6 @@ namespace Controller
                         done = true;
                     }
                 }
-
                 if (done)
                 {
                     if (section.Value.SectionType == SectionTypes.Finish)
@@ -193,7 +189,6 @@ namespace Controller
             {
                 return section.Next;
             }
-
         }
 
         public SectionData GetSectionData(Section section)
